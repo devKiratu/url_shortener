@@ -49,8 +49,8 @@ app.post("/api/shorturl/new", (req, res) => {
 				console.log(err);
 			} else if (data[0] !== undefined) {
 				res.json({
-					original_url: `${data[0].originalUrl}`,
-					short_url: `${data[0].shortUrl}`,
+					original_url: data[0].originalUrl,
+					short_url: data[0].shortUrl,
 				});
 			} else {
 				let miniUrl = 1;
